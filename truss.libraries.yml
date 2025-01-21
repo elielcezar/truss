@@ -1,0 +1,31 @@
+global-styling:
+  version: 1.x
+  css:
+    layout:
+      libraries/bootstrap/css/bootstrap.min.css: {} 
+      css/style.css: {}
+  js:    
+    libraries/bootstrap/js/bootstrap.bundle.min.js: {}        
+    js/jquery.mask.min.js: {}
+    js/script.js: {}
+  dependencies:
+    - core/jquery   
+  favicon:
+    version: 1.x
+    css: {}
+    js: {}
+    favicon:
+      - css/img/favicon.png
+    dependencies:
+      - core/drupalSettings   
+ 
+mask_custom:
+  version: 1.x
+  js:
+    js/mask-custom.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - truss/jquery_mask
+

@@ -1,0 +1,16 @@
+name: Truss
+type: theme
+base theme: false
+description: 'A theme using Stable 9 as base.'
+core_version_requirement: ^10
+libraries:
+  - truss/global-styling
+
+regions:
+  top_header: 'Top header'  
+  header: Header    
+  page_top: 'Page top'
+  content: Content
+  page_bottom: 'Page bottom'      
+  sidebar: 'Sidebar'  
+  footer: 'Footer'

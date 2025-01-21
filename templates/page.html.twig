@@ -1,0 +1,21 @@
+<div class="container">
+  <header id="mainheader">
+    {{ page.header }}
+  </header>
+
+  <main id="main-content">
+    {{ page.content }}    
+  </main>
+</div>
+
+{% if page.sidebar %}
+<aside class="sidebar">
+  {{ page.sidebar }}
+</aside>
+{% endif %}
+
+{% if page.footer %}
+<footer>
+  {{ page.footer }}
+</footer>
+{% endif %}

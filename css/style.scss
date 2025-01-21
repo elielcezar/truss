@@ -1,0 +1,731 @@
+$green: #22c55e;
+$darkgreen: #08993e;
+
+body {    
+  background: #f9fafc;  
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+.button{
+  color: #fff;
+  background: $green;
+  padding: 7px;
+  border-radius: 7px;
+  border: none;
+  width: 100%;
+  max-width: 300px;
+  margin: 15px auto;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover{
+    background: $darkgreen;
+  }
+}
+
+.messages__wrapper{
+  background: #cdf6cd;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+
+  .messages--status:nth-child(2){
+    display: none;
+  }
+}
+
+div[role="alert"]{
+  padding: 15px 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background: #f6cdcd;
+}
+
+table{
+  width: 100%;
+  background: #fff;
+  border-collapse: collapse;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  font-size: 16px;
+
+  thead{
+    background: #000;
+    th{
+      color: #fff !important;
+      padding: 15px !important;
+    }
+  }
+
+  tbody{
+    tr{
+      td{
+        padding: 15px !important;
+  
+        a{
+          color: $darkgreen;
+  
+          &:hover{
+            text-decoration: underline;
+            color: #000;
+          }
+        }
+      }
+
+      &:hover{
+        td{
+          background-color: #f5f5f5 !important;
+        }
+      }
+    }    
+  }
+}
+
+form{
+  input{
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px; 
+    margin-bottom: 20px; 
+    
+    @media(orientation:landscape){
+      max-width: 500px;
+    }
+  }
+}
+
+/*--- HOME -----------------------------------------------------------------------------------------------------------*/
+.page-user-login,
+.route-system-403{
+  background: #222 url(img/bg_home.jpg) center no-repeat;  
+  background-size: cover;
+
+  header#mainheader{
+    display: none;
+  }
+
+  #main-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #block-truss-page-title{
+      display: none;
+    }
+
+    div[aria-label="Mensagem de erro"]{      
+      max-width: 350px;           
+      text-align: center;
+
+      a{
+        font-weight: bold;
+        display: inline-block;
+        width: 100%;
+        color: #000;
+        text-decoration: underline;
+      }
+    }
+
+    #block-truss-primary-local-tasks{
+      display: none;
+    }
+    
+    #block-truss-logindousuario{
+      background: #fff url(img/banner-login.png) top center no-repeat;
+      width: 100%;
+      max-width: 350px;
+      padding: 170px 25px 25px 25px;
+      border-radius: 7px;
+      position: relative;  
+      
+      @media(orientation:portrait){
+        max-width: 80%;
+        margin: auto 10%;
+      }
+      
+      form{
+        label{
+          display: block;
+          width: 100%;
+        }
+        input{
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 7px;
+          margin-bottom: 20px;
+        }
+      } 
+      
+      ul{
+        text-align: center;
+        li{
+          a{
+            font-weight: 500;
+            color: #333;
+
+            &:hover{
+              color: $green
+            }
+          }
+        }
+      }
+  
+      .description{
+        display: none;
+      }
+    }    
+  }
+}
+
+/*--- LOGIN DO USUARIO -------------------------------------------------------------------------------------------------------------------------*/
+.page-user-login {
+  #user-login-form{
+    background: #fff url(img/banner-login.png) top center no-repeat;
+    width: 100%;
+    max-width: 350px;
+    padding: 170px 25px 25px 25px;
+    border-radius: 7px;
+    position: relative;  
+    margin-bottom: 20px;
+    
+    @media(orientation:portrait){
+      max-width: 80%;
+      margin: auto 10%;
+    }
+    
+    label{
+      display: block;
+      width: 100%;
+    }
+    input{
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      margin-bottom: 20px;
+    }    
+    
+    /*ul{
+      text-align: center;
+      li{
+        a{
+          font-weight: 500;
+          color: #333;
+
+          &:hover{
+            color: $green
+          }
+        }
+      }
+    }*/
+
+    .description{
+      display: none;
+    } 
+  }
+}
+
+/*--- MAIN HEADER ------------------------------------------------------------------------------------------------------------------------------*/
+header#mainheader{
+  height: 100vh;
+  background: #000 url(img/truss.png) center 20px no-repeat;
+  background-size: 90%;
+  margin: 0;
+  padding: 150px 20px;
+  width: 250px;
+
+  @media(orientation:portrait){
+    background: #000 url(img/truss.png) left center no-repeat;
+    background-size: 140px auto;        
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  > div{
+    @media(orientation:portrait){
+      display: flex;
+      justify-content: end;
+    }
+
+    nav{
+      @media(orientation:portrait){
+        margin: 0 20px;
+      }
+    }
+  }
+
+  ul{
+    width: 100%;
+    li{          
+      a{
+        color: #fff;
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px dotted #ccc;
+        font-size: 16px;
+        padding: 10px 0;
+
+        &:hover{
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+/*--- PAGINA APÓS O LOGIN ------------------------------------------------------------------------------------------------------------------------*/
+.node-type-page{  
+  background: #000;
+
+  #block-truss-page-title{
+    display: none;
+  }
+
+  .container{
+    max-width: 100%;
+
+    @media(orientation:landscape){
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    @media(orientation:portrait){      
+      padding: 0;
+    }    
+
+    #main-content{
+      padding: 50px;      
+      background: #f9fafc;
+      width: calc(100% - 250px);
+
+      @media(orientation:portrait){
+        width: 100%;
+        padding: 5%;
+      }
+
+      h2{
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      #block-truss-contentform{   
+        margin: 0 0 50px 0;     
+        padding: 0;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+        overflow: hidden;
+
+        h2{
+          background: #000;
+          color: #fff;
+          padding: 10px 0 15px 20px;
+          font-size: 26px;
+          margin: 0;
+
+          @media(orientation:portrait){
+            font-size: 20px;
+          }
+        }
+
+        form{
+          padding: 25px;
+        }
+
+        label{
+          display: inline-block;
+          width: 100%;          
+          font-weight: 700;
+        }
+
+        input{
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 7px; 
+          margin-bottom: 20px;         
+        }
+
+        input[name="field_foto_0_remove_button"]{
+          max-width: 100px;
+          color: red;
+          background: transparent;
+          border: 2px solid red;
+          padding: 5px;
+          margin: 0 20px;
+
+          &:hover{
+            color: #000;
+            border: 2px solid #000;
+          }
+        }
+
+        #edit-field-foto-0--description{
+          font-size: 13px;
+        }
+      }
+
+      #block-truss-views-block-qr-codes-cadastrados-block-1{
+        h2{
+          font-weight: 700;
+          padding: 10px 0 10px 50px;
+          background: transparent url(img/ico-qrcode.png) left center no-repeat;
+          background-size: 35px;
+        }
+        table{
+          tbody{
+            tr{
+              td.views-field-title{
+                background: #fff url(img/ico-qrcode.png) 15px center no-repeat;
+                background-size: 15px;
+                padding-left: 40px !important;   
+                font-weight: 500;                             
+              }              
+              td.views-field-field-nome-completo{               
+                font-weight: 500;                             
+              }
+            }
+          }
+        }
+      }
+      #block-truss-views-block-qr-codes-usuario-block-1{
+        h2{
+          font-weight: 700;
+          padding: 10px 0 10px 50px;
+          background: transparent url(img/ico-qrcode.png) left center no-repeat;
+          background-size: 35px;
+        }
+        table{
+          tbody{
+            tr{
+              td.views-field-title{
+                background: #fff url(img/ico-qrcode.png) 15px center no-repeat;
+                background-size: 15px;
+                padding-left: 40px !important;  
+                font-weight: 500;                                           
+              }
+              td.views-field-field-nome-completo{               
+                font-weight: 500;                             
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*--- MAIS PAGINAS INTERNAS ----------------------------------------------------------------------------------------*/
+.node-type-qr_code_2,
+.route-entity-user-canonical,
+.route-user-register,
+.route-user-pass,
+.route-entity-user-edit_form{
+  .container{
+    max-width: 100%;
+
+    @media(orientation:portrait){      
+      padding: 0;
+    }
+
+    @media(orientation:landscape){
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    /*header#mainheader{
+      height: 100vh;
+      background: #000 url(img/truss.png) center 20px no-repeat;
+      background-size: 90%;
+      margin: 0;
+      padding: 150px 20px;
+      width: 250px;
+
+      @media(orientation:portrait){
+        background: #000 url(img/truss.png) left center no-repeat;
+        background-size: 140px auto;        
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+      }
+
+      > div{
+        @media(orientation:portrait){
+          display: flex;
+          justify-content: end;
+        }
+
+        nav{
+          @media(orientation:portrait){
+            margin: 0 20px;
+          }
+        }
+      }
+
+
+      ul{
+        width: 100%;
+        li{          
+          a{
+            color: #fff;
+            display: inline-block;
+            width: 100%;
+            border-bottom: 1px dotted #ccc;
+            font-size: 16px;
+            padding: 10px 0;
+
+            &:hover{
+              color: $green;
+            }
+          }
+        }
+      }
+    }*/
+
+    #main-content{
+      padding: 50px;
+      background: #f9fafc;
+      width: calc(100% - 250px);
+
+      @media(orientation:portrait){
+        width: 100%;
+        padding: 7%;
+      }
+
+      h1{
+        font-weight: 700;        
+        margin-bottom: 15px;
+      }
+
+      #block-truss-primary-local-tasks{
+        display: none;
+      }
+
+      .form-item-current-pass{
+        display: none;
+      }
+
+      .password-confirm-message{
+        display: none;
+      }
+
+      #user-form,
+      #user-pass,
+      #edit-field-uf,
+      #user-login-form,
+      #user-register-form{
+        padding: 25px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+        label{
+          display: inline-block;
+          width: 100%;
+        }
+        .form-text,
+        .form-email{
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 7px;
+          margin-bottom: 20px;
+
+          @media(orientation:portrait){
+            max-width: 100%;
+          }
+        }
+        .description{
+          display: none;
+        }
+      }
+      #edit-field-uf{
+        padding: 10px;
+        max-width: 180px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  div[role="alert"]{
+    display: block;
+    padding: 10px;
+    border: 2px solid red;
+
+    em[class="placeholder"]{
+      background: transparent;
+      color: #000 !important;
+    }
+  }
+}
+
+.route-user-register,
+.route-entity-user-edit_form{
+  background: #000;
+
+  #main-content{
+    padding: 50px;
+    background: #f9fafc;
+    width: calc(100% - 250px);
+
+    @media(orientation:portrait){
+      width: 100%;
+      padding: 7%;
+    }
+  }
+}
+
+.route-user-register{
+  #main-content{
+    h1{
+      font-weight: 700;
+      padding: 10px 0 10px 50px;
+      background: transparent url(img/ico-newuser.png) left center no-repeat;
+      background-size: 40px;
+    }
+  }  
+}
+
+.route-entity-user-edit_form{
+  #block-truss-page-title{
+    display: none;
+  }
+}
+
+#edit-status--wrapper,
+a#edit-delete{
+  display: none;
+}
+
+/*--- PAGINA DE UM USUARIO ----------------------------------------------------------------------------------------*/
+.route-entity-user-canonical{
+  background: #000;
+ 
+  #main-content{
+    padding: 50px;      
+    background: #f9fafc;
+    width: calc(100% - 250px);
+  }
+  #block-truss-content{
+    article{
+      display: none;
+    }   
+  }
+  .views-field-field-nome-completo{
+    h1{
+      font-weight: 700;
+      padding: 10px 0 10px 50px;
+      background: transparent url(img/ico-user.png) left center no-repeat;
+      background-size: 40px;
+      margin-bottom: 15px !important;
+    }
+  }
+  #block-truss-views-block-perfil-usuario-block-1{
+    padding: 25px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .1);  
+    
+    .views-field{
+      display: flex;
+      margin-bottom: 10px;
+
+      .views-label{
+        font-weight: 700;
+        margin-right: 10px;
+        min-width: 135px;
+        text-align: right;
+      }
+    }
+  }
+
+  #block-truss-views-block-qr-codes-usuario-block-2{
+    margin: 50px 0;
+    font-size: 24px;
+    font-weight: 700;
+
+    h2{      
+      font-weight: 700;
+      margin-bottom: 20px;
+
+      font-weight: 700;
+      padding: 10px 0 10px 50px;
+      background: transparent url(img/ico-qrcode.png) left center no-repeat;
+      background-size: 35px;
+    }
+
+    table{
+      tbody{
+        tr{
+          td.views-field-title{
+            background: #fff url(img/ico-qrcode.png) 15px center no-repeat;
+            background-size: 15px;
+            padding-left: 40px !important;   
+            font-weight: 500;                             
+          }              
+          td.views-field-field-nome-completo{               
+            font-weight: 500;                             
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+
+/*--- PAGINA DE UM QRCODE ------------------------------------------------------------------------------*/
+.node-type-qr_code_2{
+  background: #000;
+  #main-content{
+    padding: 50px;      
+    background: #f9fafc;
+    width: calc(100% - 250px);
+
+    article{
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
+    }
+  }
+}
+
+
+/*--- LISTA USUARIOS -------------------------------------------------------------------------------------*/
+.node-id-17{
+  #block-truss-views-block-lista-usuarios-block-1{
+    h2{
+      font-weight: 700;
+      padding: 10px 0 10px 50px;
+      background: transparent url(img/ico-user.png) left center no-repeat;
+      background-size: 40px;
+    }
+  }
+  table{
+    a{
+      font-weight: 700;
+    }
+  }
+}

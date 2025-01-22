@@ -68,10 +68,16 @@ table{
 
   thead{
     background: #000;
-    th{
-      color: #fff !important;
+    th{      
       padding: 15px !important;
-    }
+      a{
+        color: #fff !important;
+
+        &:hover{
+          color: $green !important;
+        }
+      }
+    }   
   }
 
   tbody{

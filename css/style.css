@@ -66,8 +66,13 @@ table thead {
   background: #000;
 }
 table thead th {
-  color: #fff !important;
   padding: 15px !important;
+}
+table thead th a {
+  color: #fff !important;
+}
+table thead th a:hover {
+  color: #22c55e !important;
 }
 table tbody tr td {
   padding: 15px !important;

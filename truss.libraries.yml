@@ -18,6 +18,12 @@ global-styling:
       - css/img/favicon.png
     dependencies:
       - core/drupalSettings   
+
+google_fonts:
+  version: 1.x
+  css:
+    theme:     
+      https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap
  
 mask_custom:
   version: 1.x

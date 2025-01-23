@@ -2,7 +2,12 @@ $green: #22c55e;
 $darkgreen: #08993e;
 
 body {    
-  background: #f9fafc;  
+  background: #f9fafc; 
+  font-family: "Roboto", serif;   
+}
+
+h1, h2, h3, h4, h5{
+  font-family: 'Montserrat', sans-serif;
 }
 
 img{
@@ -70,6 +75,7 @@ table{
     background: #000;
     th{      
       padding: 15px !important;
+      color: #fff !important;
       a{
         color: #fff !important;
 
@@ -202,6 +208,110 @@ form{
         display: none;
       }
     }    
+  }
+}
+
+/*--- HOME DO GERENTE -----------------------------------------------------------------------------------------------------------------------*/
+.node-id-3{
+  #views-exposed-form-qr-codes-cadastrados-block-1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+
+    legend, 
+    label{
+      display: inline-block;        
+        width: 100px !important;
+        text-align: right;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    input,
+    select{
+      margin-bottom: 10px;
+      max-width: 255px;
+    }
+
+    select{
+      max-width: 150px;
+    }
+
+    /* data */
+    #edit-created-wrapper{
+      width: 100%;      
+      display: flex;
+      justify-content: flex-start;      
+      align-items: center;
+
+      .form-wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .fieldset-wrapper{
+          display: flex;
+          @media(orientation:landscape){
+            width: 50%;
+          }
+  
+          .js-form-item-created-min{
+            margin-right: 20px;
+          }
+  
+          label{
+            display: none;
+          }    
+          
+          #edit-created-min{
+            margin: 0 20px 10px 5px;
+          }
+        }
+      }            
+    }
+    /* razao social*/
+    .form-item-field-razao-social-value{
+      width: 100%;
+        
+    }
+    /* uf */
+    .js-form-type-select{
+      width: 100%;
+      display: flex;
+      align-items: center;  
+      margin-bottom: 5px;
+      
+      select{
+        margin: 5px 0 5px 5px;
+      }
+    }
+    /* cidade */
+    .form-item-field-cidade-value{
+      width: 100%;
+       
+    }
+    /* codigo */
+    .js-form-type-textfield{
+      width: 100%;         
+    }
+    /* pesquisar */
+    #edit-actions{
+      width: 100%;
+      padding-left: 115px;
+
+      input{
+        padding: 7px 21px;
+        margin: 5px 0;
+      }
+    }
+  }
+  h3.zero-itens{
+    font-size: 18px;
+    font-weight: 400;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .1);
   }
 }
 

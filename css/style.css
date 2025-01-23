@@ -1,6 +1,11 @@
 @charset "UTF-8";
 body {
   background: #f9fafc;
+  font-family: "Roboto", serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Montserrat", sans-serif;
 }
 
 img {
@@ -67,6 +72,7 @@ table thead {
 }
 table thead th {
   padding: 15px !important;
+  color: #fff !important;
 }
 table thead th a {
   color: #fff !important;
@@ -186,6 +192,97 @@ form input {
 .page-user-login #main-content #block-truss-logindousuario .description,
 .route-system-403 #main-content #block-truss-logindousuario .description {
   display: none;
+}
+
+/*--- HOME DO GERENTE -----------------------------------------------------------------------------------------------------------------------*/
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+  /* data */
+  /* razao social*/
+  /* uf */
+  /* cidade */
+  /* codigo */
+  /* pesquisar */
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 legend,
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 label {
+  display: inline-block;
+  width: 100px !important;
+  text-align: right;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 input,
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 select {
+  margin-bottom: 10px;
+  max-width: 255px;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 select {
+  max-width: 150px;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 #edit-created-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 #edit-created-wrapper .form-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 #edit-created-wrapper .form-wrapper .fieldset-wrapper {
+  display: flex;
+}
+@media (orientation: landscape) {
+  .node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 #edit-created-wrapper .form-wrapper .fieldset-wrapper {
+    width: 50%;
+  }
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 #edit-created-wrapper .form-wrapper .fieldset-wrapper .js-form-item-created-min {
+  margin-right: 20px;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 #edit-created-wrapper .form-wrapper .fieldset-wrapper label {
+  display: none;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 #edit-created-wrapper .form-wrapper .fieldset-wrapper #edit-created-min {
+  margin: 0 20px 10px 5px;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 .form-item-field-razao-social-value {
+  width: 100%;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 .js-form-type-select {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 .js-form-type-select select {
+  margin: 5px 0 5px 5px;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 .form-item-field-cidade-value {
+  width: 100%;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 .js-form-type-textfield {
+  width: 100%;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 #edit-actions {
+  width: 100%;
+  padding-left: 115px;
+}
+.node-id-3 #views-exposed-form-qr-codes-cadastrados-block-1 #edit-actions input {
+  padding: 7px 21px;
+  margin: 5px 0;
+}
+.node-id-3 h3.zero-itens {
+  font-size: 18px;
+  font-weight: 400;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 /*--- LOGIN DO USUARIO -------------------------------------------------------------------------------------------------------------------------*/

@@ -4,6 +4,7 @@ base theme: false
 description: 'A theme using Stable 9 as base.'
 core_version_requirement: ^10
 libraries:
+  - truss/google_fonts
   - truss/global-styling
 
 regions:
